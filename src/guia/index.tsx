@@ -13,9 +13,11 @@ import { Ajustes } from "./secoes/ajustes";
 import { LeitorPdf } from "./secoes/leitor-pdf";
 import { PlanoEstudos } from "./secoes/plano-estudos";
 import { Login } from "./secoes/login";
+import { Funcionalidades } from "./secoes/funcionalidades";
+import { Limitacoes } from "./secoes/limitacoes";
 
 /** Ordem do documento. Novas seções entram nesta lista. */
-const secoes = [Capa, VisaoGeral, Inicio, Conteudo, Calendario, Sessoes, Erros, Flashcards, Simulados, Comunidade, Ajustes, LeitorPdf, PlanoEstudos, Login];
+const secoes = [Capa, VisaoGeral, Inicio, Conteudo, Calendario, Sessoes, Erros, Flashcards, Simulados, Comunidade, Ajustes, LeitorPdf, PlanoEstudos, Login, Funcionalidades, Limitacoes];
 
 export function GuiaPage() {
   return (
