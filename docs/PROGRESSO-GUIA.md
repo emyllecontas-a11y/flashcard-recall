@@ -1,8 +1,8 @@
 # Progresso do Guia RevisaFlash
 
-**Status:** ETAPA 2D concluída. Próxima: ETAPA 3 (Funcionalidades gerais + Limitações gerais).
+**Status:** ETAPA 3 concluída. Próxima: ETAPA 4 (FAQ, Primeiros passos, revisão final).
 
-**Próxima mensagem a enviar:** `Continue a partir de docs/PROGRESSO-GUIA.md` (fazer a ETAPA 3)
+**Próxima mensagem a enviar:** `Continue a partir de docs/PROGRESSO-GUIA.md` (fazer a ETAPA 4)
 
 ## Decisões tomadas
 - O código foi lido do repositório GitHub `revisa-flash` (branch main). Este projeto Lovable é separado: o guia precisa ser criado DENTRO do repositório do app.
@@ -100,7 +100,7 @@ Outras telas: Leitor de PDF (`/pdf/:fileId`), Simulado aberto (`/simulados/:id`)
 - [x] ETAPA 2B — Sessões, Erros, Flashcards
 - [x] ETAPA 2C — Simulados/Listas, Comunidade, Ajustes
 - [x] ETAPA 2D — Leitor de PDF, Plano de estudos, Login/Cadastro
-- [ ] ETAPA 3 — Funcionalidades gerais + Limitações gerais
+- [x] ETAPA 3 — Funcionalidades gerais + Limitações gerais
 - [ ] ETAPA 4 — FAQ, Primeiros passos, revisão final
 
 ## Decisões da ETAPA 1
@@ -138,3 +138,8 @@ Outras telas: Leitor de PDF (`/pdf/:fileId`), Simulado aberto (`/simulados/:id`)
 - Plano: “Criar Passo a Passo” e “Importar Excel” (.xlsx), Baú de Pendências, domingo como descanso (PlanoWizard, PlanoImportCsv, PlanoDiaCard, PlanoGestaoModal).
 - Login: Google, senha mínima 8 caracteres, código por e-mail; teste gratuito de 30 dias (AccessExpired.tsx).
 - (confirmar): grifos salvos na nuvem; se domingo pode ser dia de estudo.
+
+## Decisões da ETAPA 3
+- Seções: src/guia/secoes/funcionalidades.tsx e limitacoes.tsx.
+- Fontes: offline/nuvem (app-shell.tsx, lib/powersync, conteudo.tsx), instalação (public/manifest.json, sw.js), tema claro/escuro (configuracoes.tsx), avisos (lib/notifications.ts, pomodoroAlarm.ts), imagem 2 MB JPG/PNG/WebP (EditarQuestaoModal.tsx), 30 dias (AccessExpired.tsx).
+- (confirmar): caminho de instalação em cada celular; quais avisos o app envia.
