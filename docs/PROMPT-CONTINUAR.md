@@ -17,7 +17,7 @@ Leia docs/PROGRESSO-GUIA.md antes de começar e não altere o resto do app.
 - src/routes/guia.tsx — rota /guia. src/styles.css — classes `guia-*` e impressão.
 
 **(e) O que falta, em ordem:**
-1. (feito) ETAPA 1. (feito) ETAPA 2A. (feito) ETAPA 2B. (feito) ETAPA 2C.
+1. (feito) ETAPA 1. (feito) ETAPA 2A. (feito) ETAPA 2B. (feito) ETAPA 2C. (feito) ETAPA 2D.
 2. ETAPA 2: uma seção por aba (lotes de 3, ordem do menu).
 3. ETAPA 3: funcionalidades gerais + tabela de Limitações gerais.
 4. ETAPA 4: FAQ (6–8), Primeiros passos em 5 minutos, revisão final.

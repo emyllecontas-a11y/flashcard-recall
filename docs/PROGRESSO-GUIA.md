@@ -1,8 +1,8 @@
 # Progresso do Guia RevisaFlash
 
-**Status:** ETAPA 2C concluída. Próxima: ETAPA 2D (Leitor de PDF, Plano de estudos, Login/Cadastro).
+**Status:** ETAPA 2D concluída. Próxima: ETAPA 3 (Funcionalidades gerais + Limitações gerais).
 
-**Próxima mensagem a enviar:** `Continue a partir de docs/PROGRESSO-GUIA.md` (fazer a ETAPA 2D)
+**Próxima mensagem a enviar:** `Continue a partir de docs/PROGRESSO-GUIA.md` (fazer a ETAPA 3)
 
 ## Decisões tomadas
 - O código foi lido do repositório GitHub `revisa-flash` (branch main). Este projeto Lovable é separado: o guia precisa ser criado DENTRO do repositório do app.
@@ -99,7 +99,7 @@ Outras telas: Leitor de PDF (`/pdf/:fileId`), Simulado aberto (`/simulados/:id`)
 - [x] ETAPA 2A — Início, Conteúdo, Calendário
 - [x] ETAPA 2B — Sessões, Erros, Flashcards
 - [x] ETAPA 2C — Simulados/Listas, Comunidade, Ajustes
-- [ ] ETAPA 2D — Leitor de PDF, Plano de estudos, Login/Cadastro
+- [x] ETAPA 2D — Leitor de PDF, Plano de estudos, Login/Cadastro
 - [ ] ETAPA 3 — Funcionalidades gerais + Limitações gerais
 - [ ] ETAPA 4 — FAQ, Primeiros passos, revisão final
 
@@ -131,3 +131,10 @@ Outras telas: Leitor de PDF (`/pdf/:fileId`), Simulado aberto (`/simulados/:id`)
 ## Decisões da ETAPA 2C
 - Seções: simulados.tsx, comunidade.tsx, ajustes.tsx.
 - Ajustes inclui Prova-alvo/Data da prova e "Excluir conta". Opções de tema: (confirmar).
+
+## Decisões da ETAPA 2D
+- Seções criadas: src/guia/secoes/leitor-pdf.tsx, plano-estudos.tsx, login.tsx (1 página cada).
+- Leitor: cores de grifo Amarelo/Verde/Rosa/Azul/Vermelho, Sublinhar, Riscar, Anotar, Notas, Modo leitura, busca (fonte PdfViewer.tsx).
+- Plano: “Criar Passo a Passo” e “Importar Excel” (.xlsx), Baú de Pendências, domingo como descanso (PlanoWizard, PlanoImportCsv, PlanoDiaCard, PlanoGestaoModal).
+- Login: Google, senha mínima 8 caracteres, código por e-mail; teste gratuito de 30 dias (AccessExpired.tsx).
+- (confirmar): grifos salvos na nuvem; se domingo pode ser dia de estudo.
