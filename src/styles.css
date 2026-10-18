@@ -142,3 +142,56 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== Guia RevisaFlash (cores do app) ===== */
+:root {
+  --guia-destaque: #fe7802;
+  --guia-escuro: #290e1f;
+  --guia-escuro-2: #38192b;
+  --guia-papel: #fffaf6;
+  --guia-texto: #290e1f;
+  --guia-suave: #6b5562;
+  --guia-borda: #f1e1d6;
+}
+@theme inline {
+  --color-guia-destaque: var(--guia-destaque);
+  --color-guia-escuro: var(--guia-escuro);
+  --color-guia-suave: var(--guia-suave);
+  --font-guia: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+.guia { font-family: var(--font-guia); background: var(--guia-escuro-2); color: var(--guia-texto); min-height: 100vh; }
+.guia-barra { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; background: var(--guia-escuro); color: var(--guia-papel); }
+.guia-botao { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1rem; border-radius: 0.75rem; background: var(--guia-destaque); color: var(--guia-papel); font-weight: 700; }
+.guia-documento { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 1.5rem 0.75rem; }
+.guia-pagina { width: 210mm; max-width: 100%; min-height: 297mm; padding: 15mm; background: var(--guia-papel); border-radius: 1rem; box-shadow: 0 20px 50px -20px rgb(0 0 0 / 0.5); display: flex; flex-direction: column; }
+.guia-pagina-escura { background: linear-gradient(160deg, var(--guia-escuro), var(--guia-escuro-2)); color: var(--guia-papel); }
+.guia-pagina-escura > div { flex: 1; }
+.guia-etiqueta { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 999px; background: var(--guia-destaque); color: var(--guia-papel); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+.guia-logo { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 0.9rem; background: var(--guia-destaque); }
+.guia-cartao { border: 1px solid var(--guia-borda); border-radius: 1rem; background: #fff; break-inside: avoid; }
+.guia-cartao-escuro { border-radius: 1rem; background: rgb(255 255 255 / 0.08); border: 1px solid rgb(255 255 255 / 0.12); }
+.guia-tela { overflow: hidden; }
+.guia-tela-topo { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.75rem; background: var(--guia-escuro); color: var(--guia-papel); }
+.guia-marca { position: absolute; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 999px; background: var(--guia-destaque); color: var(--guia-papel); font-size: 0.7rem; font-weight: 800; box-shadow: 0 0 0 2px var(--guia-papel); }
+.guia-marca.static { position: static; }
+.guia-caixa-dica { background: #fff3e8; border-color: #ffd2aa; }
+.guia-caixa-dica svg { color: var(--guia-destaque); }
+.guia-caixa-atencao { background: #fdecef; border-color: #f5c2cc; }
+.guia-caixa-atencao svg { color: #b4234a; }
+.guia-tabela { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.guia-tabela th { background: var(--guia-escuro); color: var(--guia-papel); text-align: left; padding: 0.5rem; }
+.guia-tabela td { border-bottom: 1px solid var(--guia-borda); padding: 0.5rem; vertical-align: top; }
+.guia-tabela tr { break-inside: avoid; }
+
+@page { size: A4; margin: 15mm; }
+@media print {
+  .guia, .guia * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .guia { background: none; }
+  .guia-barra, nav, aside[data-sidebar] { display: none !important; }
+  .guia-documento { padding: 0; gap: 0; display: block; }
+  .guia-pagina { width: auto; min-height: 267mm; padding: 0; border-radius: 0; box-shadow: none; break-after: page; }
+  .guia-pagina:last-child { break-after: auto; }
+  .guia-pagina-escura { padding: 10mm; border-radius: 1rem; }
+  .guia-cartao, .guia-cartao-escuro { break-inside: avoid; }
+}
